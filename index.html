@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peachy Loops ♡</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="#home">୨୧ Peachy Loops</a>
+    <p class="tagline">little handmade things, made with love ♡</p>
+    <nav aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#shop">Our Creations</a>
+      <a href="#basket">My Basket <span aria-hidden="true">🧺</span> <span id="basket-count">0</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="welcome" id="home">
+      <p class="eyebrow">HANDMADE WITH LOVE</p>
+      <h1>A little yarn magic<br><span>just for you.</span></h1>
+      <p class="welcome-copy">Tiny treasures, cozy stitches, and adorable handmade friends.</p>
+      <a href="#shop" class="shop-button">Explore our shop ♡</a>
+      <div class="decor decor-one" aria-hidden="true">✿</div>
+      <div class="decor decor-two" aria-hidden="true">♡</div>
+    </section>
+
+    <section class="shop-section" id="shop">
+      <p class="eyebrow">MADE SLOWLY, LOVED FOREVER</p>
+      <h2>Our cute creations 🎀</h2>
+      <p class="section-intro">A few little things to make your day softer.</p>
+      <div class="products">
+        <article class="product">
+          <div class="product-art tulip-art" aria-hidden="true">🌷</div>
+          <p class="product-label">FLOWER FRIEND</p>
+          <h3>Crochet Tulip</h3>
+          <p class="description">A forever flower for your favorite person.</p>
+          <div class="product-bottom"><span class="price">120 birr</span><button onclick="addToBasket('Crochet Tulip', 120)">Add to basket ♡</button></div>
+        </article>
+        <article class="product">
+          <div class="product-art bunny-art" aria-hidden="true">🐰</div>
+          <p class="product-label">COZY PAL</p>
+          <h3>Bunny Plushie</h3>
+          <p class="description">A tiny cuddly friend with lots of love.</p>
+          <div class="product-bottom"><span class="price">350 birr</span><button onclick="addToBasket('Bunny Plushie', 350)">Add to basket ♡</button></div>
+        </article>
+        <article class="product">
+          <div class="product-art daisy-art" aria-hidden="true">🌼</div>
+          <p class="product-label">LITTLE ACCESSORY</p>
+          <h3>Daisy Keychain</h3>
+          <p class="description">A little flower to take everywhere.</p>
+          <div class="product-bottom"><span class="price">80 birr</span><button onclick="addToBasket('Daisy Keychain', 80)">Add to basket ♡</button></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="basket-section" id="basket">
+      <div class="basket-card">
+        <div>
+          <p class="eyebrow">YOUR LITTLE COLLECTION</p>
+          <h2>My little basket 🧺</h2>
+          <p class="section-intro">Your favorite handmade goodies, all in one place.</p>
+        </div>
+        <ul id="basket-items"><li class="empty-basket">Your basket is empty ♡</li></ul>
+        <div class="basket-total"><span>Total</span><strong id="total">0 birr</strong></div>
+        <div class="basket-actions">
+          <button class="secondary-button" onclick="clearBasket()">Clear basket</button>
+          <button onclick="placeOrder()">I'm interested ♡</button>
+        </div>
+        <p id="basket-message" class="basket-message" role="status">This is a demo basket; it doesn't take real payments.</p>
+      </div>
+    </section>
+
+    <section class="about-section">
+      <div class="about-flower" aria-hidden="true">🌸</div>
+      <div><p class="eyebrow">A LITTLE NOTE</p><h2>Made by hand, made with heart.</h2><p>Every stitch tells a tiny story. Thanks for supporting handmade things and the people who make them.</p></div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="logo footer-logo" href="#home">୨୧ Peachy Loops</a>
+    <p>Made with ♡ and a little yarn magic.</p>
+    <p class="copyright">© 2026 Peachy Loops · A beginner website project</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

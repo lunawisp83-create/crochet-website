@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+:root {
+  --pink: #d981a0;
+  --pink-dark: #a84f70;
+  --pink-soft: #f9e5ec;
+  --cream: #fffaf7;
+  --ink: #654552;
+  --muted: #927783;
+  --white: #ffffff;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: 'DM Sans', Arial, sans-serif;
+  line-height: 1.6;
+}
+a { color: inherit; }
+.site-header {
+  text-align: center;
+  padding: 25px 18px 20px;
+  background: #fffdfc;
+  border-bottom: 1px solid #f4e2e8;
+}
+.logo {
+  display: inline-block;
+  color: var(--pink-dark);
+  text-decoration: none;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.tagline { margin: 2px 0 18px; color: var(--muted); font-size: .9rem; }
+nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px 28px; }
+nav a { text-decoration: none; font-size: .92rem; font-weight: 600; }
+nav a:hover { color: var(--pink-dark); }
+#basket-count {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 21px; height: 21px; margin-left: 3px; padding: 0 5px;
+  border-radius: 50px; background: var(--pink-soft); color: var(--pink-dark); font-size: .75rem;
+}
+.welcome {
+  position: relative; overflow: hidden; text-align: center;
+  padding: 88px 20px 95px;
+  background: radial-gradient(circle at 15% 25%, #fff9f4 0 9%, transparent 9.5%),
+              radial-gradient(circle at 85% 70%, #f4dce6 0 11%, transparent 11.5%),
+              linear-gradient(135deg, #fbeaf0, #fff4ec);
+}
+.eyebrow { margin: 0 0 10px; color: var(--pink-dark); font-size: .72rem; font-weight: 700; letter-spacing: .17em; }
+h1, h2, h3 { line-height: 1.2; }
+h1, h2 { font-family: 'Playfair Display', Georgia, serif; }
+.welcome h1 { margin: 0 auto 18px; font-size: clamp(2.5rem, 6vw, 4.6rem); letter-spacing: -.04em; }
+.welcome h1 span { color: var(--pink-dark); font-style: italic; }
+.welcome-copy { max-width: 470px; margin: 0 auto 26px; color: #806472; }
+.shop-button, button {
+  border: 0; border-radius: 999px; background: var(--pink); color: white;
+  font: inherit; font-size: .9rem; font-weight: 700; text-decoration: none;
+  padding: 12px 20px; cursor: pointer; transition: transform .18s, background .18s;
+}
+.shop-button { display: inline-block; box-shadow: 0 7px 18px #d981a033; }
+button:hover, .shop-button:hover { background: var(--pink-dark); transform: translateY(-2px); }
+button:focus-visible, a:focus-visible { outline: 3px solid #b75b7c; outline-offset: 4px; }
+.decor { position: absolute; color: #d981a088; font-size: 3.5rem; }
+.decor-one { top: 18%; left: 12%; transform: rotate(-15deg); }
+.decor-two { right: 13%; bottom: 14%; font-size: 4rem; }
+.shop-section { max-width: 1100px; margin: auto; padding: 75px 22px 85px; text-align: center; }
+.shop-section h2, .basket-card h2, .about-section h2 { margin: 0; font-size: clamp(2rem, 4vw, 2.7rem); }
+.section-intro { margin: 12px 0 32px; color: var(--muted); }
+.products { display: flex; justify-content: center; align-items: stretch; flex-wrap: wrap; gap: 22px; }
+.product {
+  display: flex; flex-direction: column; text-align: left; width: min(100%, 310px);
+  padding: 15px; border: 1px solid #f2dfe6; border-radius: 22px;
+  background: white; box-shadow: 0 10px 30px #78485b0a;
+}
+.product-art { display: grid; place-items: center; min-height: 190px; border-radius: 15px; font-size: 5.8rem; }
+.tulip-art { background: #fff0f2; }
+.bunny-art { background: #f8f0e9; }
+.daisy-art { background: #fff6d9; }
+.product-label { margin: 18px 0 5px; color: var(--pink-dark); font-size: .67rem; letter-spacing: .13em; font-weight: 700; }
+.product h3 { margin: 0; font-family: 'Playfair Display', Georgia, serif; font-size: 1.35rem; }
+.description { margin: 8px 0 18px; color: var(--muted); font-size: .88rem; }
+.product-bottom { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-top: auto; }
+.price { color: var(--pink-dark); font-weight: 700; white-space: nowrap; }
+.product-bottom button { padding: 10px 13px; font-size: .8rem; }
+.basket-section { padding: 65px 20px; background: #fbeef2; }
+.basket-card { max-width: 690px; margin: auto; padding: 32px; background: white; border: 1px solid #f2dfe6; border-radius: 25px; box-shadow: 0 12px 35px #78485b0b; }
+.basket-card .section-intro { margin-bottom: 22px; }
+#basket-items { list-style: none; padding: 0; margin: 0; }
+#basket-items li { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 13px 0; border-bottom: 1px solid #f4e8ec; }
+#basket-items .empty-basket { justify-content: flex-start; color: var(--muted); }
+.remove-button { padding: 6px 12px; background: #f6e6ec; color: var(--pink-dark); font-size: .78rem; }
+.remove-button:hover { background: #efd2de; }
+.basket-total { display: flex; justify-content: space-between; padding: 20px 0; font-size: 1.1rem; }
+.basket-total strong { color: var(--pink-dark); }
+.basket-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.secondary-button { background: #f6e6ec; color: var(--pink-dark); }
+.secondary-button:hover { background: #efd2de; }
+.basket-message { color: var(--muted); font-size: .8rem; margin-bottom: 0; }
+.about-section { display: flex; align-items: center; justify-content: center; gap: 30px; max-width: 800px; margin: auto; padding: 70px 25px; }
+.about-section > div:last-child { max-width: 490px; }
+.about-section p:last-child { color: var(--muted); }
+.about-flower { display: grid; place-items: center; width: 125px; height: 125px; flex-shrink: 0; border-radius: 50%; background: #fbe6ec; font-size: 4rem; }
+footer { padding: 30px 20px; background: #fffdfc; text-align: center; border-top: 1px solid #f4e2e8; }
+.footer-logo { font-size: 1.5rem; }
+footer p { margin: 5px 0; color: var(--muted); font-size: .88rem; }
+footer .copyright { margin-top: 15px; font-size: .75rem; }
+@media (max-width: 600px) {
+  .welcome { padding: 70px 20px; }
+  .decor-one { left: 3%; font-size: 2.4rem; }
+  .decor-two { right: 4%; font-size: 2.6rem; }
+  .shop-section { padding: 55px 17px; }
+  .product { width: 100%; max-width: 360px; }
+  .basket-card { padding: 23px 18px; }
+  .about-section { flex-direction: column; text-align: center; gap: 18px; }
+}
